@@ -1,0 +1,14 @@
+/tomcat/app-logs/*
+!/tomcat/app-logs/.git-keep
+/tomcat/tomcat-logs/*
+!/tomcat/tomcat-logs/.git-keep
+/tomcat/webapps/*
+!/tomcat/webapps/.git-keep
+
+/nginx/log/*
+!/nginx/log/.git-keep
+/nginx/web/*
+!/nginx/web/.git-keep
+
+/mysql/data/*
+/mysql/data/.git-keep
