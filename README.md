@@ -1,5 +1,5 @@
 # 使用说明
-开发中还会用到 php 命令行和 composer 工具
+开发中还会用到 php 命令行和 composer 工具, 使用 build 目录下的打包文件构建相关镜像
 1. php-cli
 在~/.bashrc 中添加别名, 注意 docker 镜像换成自己期望的版本
 ```
