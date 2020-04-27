@@ -1,14 +1,16 @@
 # 使用说明
 开发中还会用到 php 命令行和 composer 工具, 使用 build 目录下的打包文件构建相关镜像
-1. php-cli
+## php-cli
 在~/.bashrc 中添加别名, 注意 docker 镜像换成自己期望的版本
 ```
 alias php="sudo docker run -it --rm -v \$PWD:/usr/src/myapp -w /usr/src/myapp php:7.4.0-cli-alpine php "
 ```
-2. composer 命令行工具
-在~/.bashrc 中添加别名，注意 docker 镜像换成自己期望的版本  
+## composer 命令行工具
+1. 在~/.bashrc 中添加别名，注意 docker 镜像换成自己期望的版本  
+2. 把 build/config/.composer 拷贝到 $HOME/ 下，并设置可访问的权限
+3. 可以在$HOME/.composer/config.json 修改 composer 配置，包括镜像源的修改
 ```
-alias composer="sudo docker run --rm -it --user \$(id -u):\$(id -g) -v \$PWD:/app -v \$HOME/.composer:/.composer composer:1.9.1 "
+alias composer="sudo docker run --rm -it --user \$(id -u):\$(id -g) -v \$PWD:/app -v \$HOME/.composer:/.composer composer:1.9.1 composer "
 ```
 
 # 打包镜像说明
